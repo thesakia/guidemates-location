@@ -8,6 +8,7 @@ local pulseCurves = {}
 local cachedMap, mapWidth, mapHeight
 
 local bar = CreateFrame("Frame", "MateCompass", UIParent)
+bar:Hide()
 bar:SetSize(660, 46)
 bar:SetFrameStrata("MEDIUM")
 bar:SetClampedToScreen(true)
@@ -357,20 +358,19 @@ bar:SetScript("OnUpdate", function(_, dt)
     end
 end)
 
-local function respectGuildmateMapOption()
-    -- Soft hook for GuildmateMap: hide only when that option is explicitly false.
-    -- If GuildmateMap is absent, or the option is true/nil, keep the bar visible.
-    if GuildmateMapDB and GuildmateMapDB.mateCompass == false then
-        bar:Hide()
-    else
-        bar:Show()
-    end
+function bar:RefreshVisibility()
+    local enabled = not GuildmateMapDB or GuildmateMapDB.mateCompass ~= false
+    local show = db ~= nil and enabled and IsInGroup() and not IsInRaid()
+    self:SetShown(show)
+    if show then updateData() end
 end
 
 bar:RegisterEvent("ADDON_LOADED")
-bar:SetScript("OnEvent", function(_, _, addon)
-    if addon == "GuildmateMap" then
-        respectGuildmateMapOption()
+bar:RegisterEvent("GROUP_ROSTER_UPDATE")
+bar:RegisterEvent("PLAYER_ENTERING_WORLD")
+bar:SetScript("OnEvent", function(self, event, addon)
+    if event ~= "ADDON_LOADED" or addon == "GuildmateMap" then
+        self:RefreshVisibility()
         return
     end
     if addon ~= "MateCompass" then return end
@@ -384,8 +384,7 @@ bar:SetScript("OnEvent", function(_, _, addon)
     bar:ClearAllPoints()
     if db.x and db.y then bar:SetPoint("CENTER", UIParent, "BOTTOMLEFT", db.x, db.y)
     else bar:SetPoint("TOP", UIParent, "TOP", 0, -28) end
-    updateData()
-    respectGuildmateMapOption()
+    self:RefreshVisibility()
 end)
 
 SLASH_MATECOMPASS1 = "/matecompass"

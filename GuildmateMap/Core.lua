@@ -490,18 +490,17 @@ local function isMateCompassInstalled()
 end
 local function applyMateCompass()
     if not db then return end
-    local frame = _G.MateCompass
-    if db.mateCompass == false then
-        if frame then pcall(function() frame:Hide() end) end
-        return
-    end
-    -- nil or true: treat as ON. Enable/load if the addon is present.
-    if isMateCompassInstalled() then
+    local enabled = db.mateCompass ~= false
+    if enabled and isMateCompassInstalled() then
         callAddOn('EnableAddOn', EnableAddOn, 'MateCompass')
         callAddOn('LoadAddOn', LoadAddOn, 'MateCompass')
     end
-    frame = _G.MateCompass
-    if frame then pcall(function() frame:Show() end) end
+    local frame = _G.MateCompass
+    if frame and frame.RefreshVisibility then
+        pcall(frame.RefreshVisibility, frame)
+    elseif frame then
+        pcall(frame.SetShown, frame, enabled)
+    end
 end
 local function setBool(flag,sub,which)
     if sub == 'on' or sub == 'oui' or sub == '1' then db[flag]=true
