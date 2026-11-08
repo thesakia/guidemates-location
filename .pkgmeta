@@ -1,7 +1,6 @@
-package-as: Guild-Mates-Location
+package-as: GuildmateMap
 move-folders:
-  Guild-Mates-Location/GuildmateMap: GuildmateMap
-  Guild-Mates-Location/MateCompass: MateCompass
+  GuildmateMap/MateCompass: MateCompass
 ignore:
   - README.md
   - CHANGELOG.txt
