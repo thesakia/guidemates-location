@@ -1,0 +1,12 @@
+## Interface: 16001
+## Title: GuideMate's location
+## Notes: Guild member positions on the map, zone counter, hover roster and optional MateCompass (WoW Forever)
+## Notes-frFR: Membres de guilde sur la carte, compteur de zone, liste au survol et boussole MateCompass optionnelle
+## Author: RATL
+## Version: 1.2.0
+## SavedVariables: GuildmateMapDB
+## OptionalDeps: MateCompass
+## Category: Map
+## IconTexture: Interface\AddOns\GuildmateMap\Media\ratl-logo
+Core.lua
+Pins.xml

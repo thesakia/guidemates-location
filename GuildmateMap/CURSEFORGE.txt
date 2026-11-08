@@ -1,0 +1,55 @@
+PROJECT TITLE
+GuideMate's location
+
+SUMMARY — English first
+Show guild members on the world map, with zone counts, a hover roster and an optional group compass.
+Affichez les membres de guilde sur la carte, avec compteur par zone, liste au survol et boussole de groupe optionnelle.
+
+DESCRIPTION
+English
+GuideMate's location displays guild member locations on the world map. It includes a zone counter, a roster on hover, and the bundled MateCompass group compass, enabled by default.
+
+Features
+- View guild members in the selected zone.
+- Share precise positions with other users of the compatible addon version.
+- View guild roster zones for members without the addon; precise coordinates require the addon.
+- Show or hide your own map pin and control position sharing.
+- Enable or hide MateCompass with /gmap compass on|off.
+
+Installation
+Close the game, back up your existing addon folders, then extract both GuildmateMap and MateCompass into Interface/AddOns. Keep these folder names. Start the game and type /gmap.
+
+Commands
+/gmap self on|off — show or hide your own pin
+/gmap share on|off — enable or disable position sharing
+/gmap pins on|off — show or hide member pins
+/gmap compass on|off — enable or hide MateCompass
+/gmap status — display settings
+
+Compatibility
+This package targets WoW Forever 1.60.1 (Interface 16001). Compatibility with official WoW clients has not been verified. The supplied installation notes state that this reconstructed version has not been tested in the game client. Select a CurseForge game version only after verifying compatibility.
+GuildmateMap 1.2.0 and MateCompass 0.1.3-beta are included. All users should update to a compatible addon version for precise position sharing.
+
+Français
+GuideMate's location affiche la position des membres de guilde sur la carte du monde. Il comprend un compteur par zone, une liste au survol et la boussole de groupe MateCompass, incluse et activée par défaut.
+
+Fonctionnalités
+- Affichage des membres dans la zone consultée.
+- Partage des coordonnées précises entre utilisateurs d'une version compatible de l'addon.
+- Affichage de la zone des membres sans addon via la liste de guilde ; les coordonnées précises nécessitent l'addon.
+- Affichage ou masquage de votre propre repère et contrôle du partage de position.
+- Activation ou masquage de MateCompass avec /gmap compass on|off.
+
+Installation
+Fermez le jeu, sauvegardez vos dossiers existants, puis extrayez GuildmateMap et MateCompass dans Interface/AddOns. Conservez ces noms de dossiers. Lancez le jeu et tapez /gmap.
+
+Commandes
+/gmap self on|off — afficher ou masquer votre repère
+/gmap share on|off — activer ou désactiver le partage de position
+/gmap pins on|off — afficher ou masquer les repères des membres
+/gmap compass on|off — activer ou masquer MateCompass
+/gmap status — afficher les réglages
+
+Compatibilité
+Ce package cible WoW Forever 1.60.1 (Interface 16001). La compatibilité avec les clients officiels WoW n'est pas vérifiée. La notice fournie indique que cette version reconstruite n'a pas été testée dans le client de jeu. Ne sélectionnez une version du jeu sur CurseForge qu'après vérification de la compatibilité.
+GuildmateMap 1.2.0 et MateCompass 0.1.3-beta sont inclus. Tous les utilisateurs doivent disposer d'une version compatible pour partager leurs coordonnées précises.

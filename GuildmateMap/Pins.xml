@@ -1,0 +1,10 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+    <Frame name="RATLGuildmateMapPinTemplate" virtual="true" hidden="true" enableMouse="true" mixin="RATLGuildmateMapPinMixin">
+        <Size x="22" y="22"/>
+        <Layers>
+            <Layer level="ARTWORK">
+                <Texture parentKey="texture" setAllPoints="true"/>
+            </Layer>
+        </Layers>
+    </Frame>
+</Ui>

@@ -1,0 +1,6 @@
+GuideMate's location — package 1.2.0 (rev3)
+- Visual rename only: the displayed name is now "GuideMate's location" everywhere (TOC title, chat prefix, roster popup header, INSTALL notes, bundled CURSEFORGE.txt).
+- No logic, network protocol, saved-variable, slash command (/gmap) or folder name changes. Folders remain GuildmateMap and MateCompass.
+- Contains GuildmateMap 1.2.0 and MateCompass 0.1.3-beta (enabled by default; /gmap compass on|off).
+- English summary and description first, French below, per CurseForge moderation.
+- Targets WoW Forever 1.60.1 (Interface 16001); not tested in-game.

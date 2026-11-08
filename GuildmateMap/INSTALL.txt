@@ -1,0 +1,31 @@
+GuideMate's location 1.2.0 — WoW Forever 1.60.1
+
+- Fermer le jeu.
+- Sauvegarder votre dossier ...\_forever_\Interface\AddOns\GuildmateMap (ancienne version).
+- Supprimer l'ancien dossier GuildmateMap pour éviter les fichiers résiduels.
+- Copier les dossiers GuildmateMap ET MateCompass dans ...\_forever_\Interface\AddOns\
+- Lancer WoW ; taper /gmap.
+
+Interface : le cercle numéroté apparaît à côté du filtre de la World Map.
+Survol : liste de tous les joueurs de la zone consultée ; molette dans la
+liste si plus de 12 joueurs.
+Clic droit sur le cercle : montrer/masquer votre propre pin.
+
+La boussole MateCompass est incluse et activée par défaut. Couper ou
+réactiver sans désinstaller : /gmap compass off  (alias : boussole, matecompass).
+
+/gmap self off        masque votre pin, pas votre présence dans le total
+/gmap self on         montre votre pin
+/gmap share off       arrête la transmission de votre position
+/gmap share on        autorise la transmission
+/gmap pins off        masque les pins de tous les membres (pas le compteur)
+/gmap compass on|off  active ou masque MateCompass (ON par défaut)
+/gmap status          affiche les réglages
+
+Les membres sans addon apparaissent dans la liste via leur zone de guilde,
+mais leurs coordonnées précises n'apparaissent qu'avec l'addon.
+IMPORTANT : tous les joueurs doivent mettre à jour l'addon pour que les
+positions envoyées soient compatibles avec cette version de diffusion.
+
+Compatibilité : version reconstruite sans accès direct aux sources V1.0.0,
+non testée dans le client WoW. Conserver une copie du dossier V1 avant essai.
